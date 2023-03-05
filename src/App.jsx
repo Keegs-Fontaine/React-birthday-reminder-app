@@ -19,7 +19,7 @@ import BirthdayContainer from "./components/BirthdayContainer";
 
 export default function App() {
   return (
-    <section>
+    <section className="grid place-items-center h-screen bg-pink-400">
       <BirthdayContainer></BirthdayContainer>
     </section>
   );
