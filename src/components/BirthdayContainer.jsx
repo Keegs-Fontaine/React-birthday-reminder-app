@@ -12,8 +12,8 @@ export default function BirthdayContainer() {
   };
 
   return (
-    <article className="w-full max-w-sm p-5 bg-white">
-      <h1 className="text-2xl">{`${birthdays.length} birthdays today`}</h1>
+    <article className="w-full max-w-sm p-5 bg-white rounded-lg shadow-2xl">
+      <h1 className="text-2xl mb-5">{`${birthdays.length} birthdays today`}</h1>
       {birthdays.map(({ name, age, image, id }) => {
         return (
           <Birthday
@@ -25,6 +25,12 @@ export default function BirthdayContainer() {
           ></Birthday>
         );
       })}
+      <button
+        onClick={() => setBirthdays([])}
+        className="w-full p-2 text-white text-xl bg-pink-400 rounded-md"
+      >
+        Clear All
+      </button>
     </article>
   );
 }
